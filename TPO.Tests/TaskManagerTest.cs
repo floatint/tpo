@@ -33,5 +33,20 @@ namespace TPO.Tests
             // assert
             Assert.AreEqual(2, mgr.Count());
         }
+
+        [TestMethod]
+        public void TestDelete()
+        {
+            // arrange
+            TaskManager mgr = new TaskManager();
+
+            // act
+            mgr.Add(new UserTask { Name = "test", Description = "test" });
+            mgr.Add(new UserTask { Name = "test2", Description = "test2" });
+            mgr.Delete(1);
+
+            // assert
+            Assert.AreEqual(1, mgr.Count());
+        }
     }
 }
