@@ -13,6 +13,8 @@ namespace TPO.Logic
     {
 
         public int Count() => _tasks.Count;
+
+        public void Add(UserTask userTask) => throw new NotImplementedException();
         
         private IList<UserTask> _tasks = new List<UserTask>();
     }
