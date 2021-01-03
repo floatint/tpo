@@ -9,7 +9,7 @@ namespace TPO.Logic
     /// <summary>
     /// Сущность задачи
     /// </summary>
-    public struct Task
+    public struct UserTask
     {
         public string Name { set; get; }
         public string Description { set; get; }
