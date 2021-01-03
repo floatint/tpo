@@ -12,7 +12,7 @@ namespace TPO.Logic
     public class TaskManager
     {
 
-        public int Count() => throw new NotImplementedException();
+        public int Count() => _tasks.Count;
         
         private IList<UserTask> _tasks = new List<UserTask>();
     }
