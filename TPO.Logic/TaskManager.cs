@@ -17,6 +17,8 @@ namespace TPO.Logic
         public void Add(UserTask userTask) => _tasks.Add(userTask);
 
         public void Delete(int idx) => _tasks.RemoveAt(idx);
+
+        public UserTask Get(int idx) => throw new NotImplementedException();
         
         private IList<UserTask> _tasks = new List<UserTask>();
     }

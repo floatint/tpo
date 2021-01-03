@@ -48,5 +48,27 @@ namespace TPO.Tests
             // assert
             Assert.AreEqual(1, mgr.Count());
         }
+
+        [TestMethod]
+        public void TestGet()
+        {
+            // arrange
+            TaskManager mgr = new TaskManager();
+            UserTask target = new UserTask
+            {
+                Name = "target",
+                Description = "target"
+            };
+
+            // act
+            mgr.Add(new UserTask { Name = "task_1", Description = "task_1" });
+            mgr.Add(target);
+            mgr.Add(new UserTask { Name = "task_2", Description = "task_2" });
+            UserTask tmp = mgr.Get(1);
+
+            // assert
+            Assert.IsNotNull(tmp);
+            Assert.AreEqual(target, tmp);
+        }
     }
 }
